@@ -19,8 +19,10 @@ class VCFailedLogin: UIViewController {
         self.timerCounter -= 1
         if self.timerCounter < 0 {
             timer.invalidate()
+            
             let vcLogin: UIViewController = storyboard?.instantiateViewController(withIdentifier: "SIDLogin") as! VCLogin
             present(vcLogin, animated: true, completion: nil)
+            
         } else {
             lblMessage.text = "You've got \(timerCounter) second to back login screen. Please waiting..."
         }

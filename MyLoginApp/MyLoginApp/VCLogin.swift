@@ -11,6 +11,7 @@ import UIKit
 class VCLogin: UIViewController {
 
     var iCount: Int = 0 // kiem tra so lan nhap sai neu so lan nhap sai lon hon 5 thi chuyen sang man hinh yyy doi xxx giay
+    let usrDefaults: UserDefaults = UserDefaults()
     
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var txtUsername: UITextField!
@@ -26,6 +27,9 @@ class VCLogin: UIViewController {
             iCount += 1
         }
         else{
+            
+            usrDefaults.set(usrName, forKey: "usrName")
+            
             let vcOK: UIViewController = storyboard?.instantiateViewController(withIdentifier: "SIDSucceededLogin") as! VCSucceededLogin
             present(vcOK, animated: true, completion: nil)
         }
@@ -71,6 +75,11 @@ class VCLogin: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let msg = usrDefaults.object(forKey: "msgLoggingOut")
+        let usrName = usrDefaults.object(forKey: "usrName")
+        txtUsername.text = usrName as? String
+        lblMessage.text = msg as? String
     }
 
     override func didReceiveMemoryWarning() {
