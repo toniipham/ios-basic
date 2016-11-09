@@ -63,10 +63,10 @@ class ViewController: UIViewController {
             //lblStartTime.text = "0:0"
             durationTime = Float(player.duration)
             lblStartTime.text = "00:00"
-            lblEndTime.text = durationFormat(duration: Float(player.duration))
+            lblEndTime.text = formatTime(fTime: Float(player.duration))
             sldCurrent.maximumValue = Float(self.player.duration)
             //print(durationFormat(duration: Float(player.currentTime)))
-            if isPlayed{
+            if isPlayed && isStop == false{
                 player.play()
                 player.volume = 0.5
                 currentTime = Float(player.currentTime)
@@ -77,14 +77,13 @@ class ViewController: UIViewController {
                 // tam thoi su dung timer
                 timerXoayAlbum = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.xoayAlbumCD), userInfo: nil, repeats: true)
                 timerSlider = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
-            }else{
-                player.pause()
-                //timerXoayAlbum.
-                
-            }
-            if isStop
-            {
+            }else if isPlayed == false && isStop == true{
                 player.stop()
+            } else {
+                player.pause()
+                // giu thoi gian hien tai
+                updateDuration()
+                updateSlider()
             }
         }catch{}
     }
@@ -122,6 +121,11 @@ class ViewController: UIViewController {
         //print("CurTime: \(durationFormat(duration: curTime)) and remain time: \(durationFormat(duration: remainedTime))")
         lblStartTime.text = formatTime(fTime: curTime)
         lblEndTime.text = formatTime(fTime: remainedTime)
+        if remainedTime == 0 {
+            timerXoayAlbum.invalidate()
+            timerUpdateTime.invalidate()
+            timerSlider.invalidate()
+        }
     }
     func updateSlider()
     {
@@ -132,13 +136,18 @@ class ViewController: UIViewController {
     
     @IBAction func abtnStop(_ sender: Any) {
         isStop = true
+        btnPlay.setImage(UIImage(named: "play"), for: .normal)
+        isPlayed = false
         playMusic()
+        timerXoayAlbum.invalidate()
+        timerUpdateTime.invalidate()
+        timerSlider.invalidate()
     }
     @IBAction func btnPlay(_ sender: Any) {
                 if !isPlayed{
                     btnPlay.setImage(UIImage(named: "pause"), for: .normal)
                     isPlayed = true
-                    
+                    isStop = false
                 }else{
                     btnPlay.setImage(UIImage(named: "play"), for: .normal)
                     isPlayed = false
