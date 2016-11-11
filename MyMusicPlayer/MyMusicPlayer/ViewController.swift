@@ -11,17 +11,25 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var view3: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view1: UIView!
     let lblStartTime: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
     let lblEndTime: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
+    //let lbl: UILabel = UILabel(frame: CGRect(x: 300, y: 600, width: 60, height: 30))
+    let lblStartTime1: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
+    let lblEndTime1: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
+    let slider1: UISlider = UISlider(frame: CGRect(x: 0, y: 0, width: 230, height: 30))
+    let slider2: UISlider = UISlider(frame: CGRect(x: 0, y: 0, width: 230, height: 30))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // hien thi hinh anh theo album
         imgAlbumCD.image = UIImage(named: "ae1")
-        // tu tao lable hien thi thoi gian dong
+        // tu tao label hien thi thoi gian dong
         view1.addSubview(lblStartTime)
         view2.addSubview(lblEndTime)
+        view3.addSubview(slider1)
         //self.view.addSubview(lbl)
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -41,7 +49,6 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var imgAlbumCD: UIImageView!
-    @IBOutlet weak var sldCurrent: UISlider!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var tvLyrics: UITextView!
     
@@ -53,6 +60,8 @@ class ViewController: UIViewController {
     var timerSlider = Timer()
     var durationTime: Float?
     var currentTime: Float?
+    var curTimer: Float?
+    var remainedTimer: Float?
     
     func playMusic(){
         
@@ -64,9 +73,10 @@ class ViewController: UIViewController {
             durationTime = Float(player.duration)
             lblStartTime.text = "00:00"
             lblEndTime.text = formatTime(fTime: Float(player.duration))
-            sldCurrent.maximumValue = Float(self.player.duration)
+            slider1.maximumValue = Float(self.player.duration)
             //print(durationFormat(duration: Float(player.currentTime)))
             if isPlayed && isStop == false{
+                player.prepareToPlay()
                 player.play()
                 player.volume = 0.5
                 currentTime = Float(player.currentTime)
@@ -81,9 +91,7 @@ class ViewController: UIViewController {
                 player.stop()
             } else {
                 player.pause()
-                // giu thoi gian hien tai
-                updateDuration()
-                updateSlider()
+                
             }
         }catch{}
     }
@@ -127,11 +135,23 @@ class ViewController: UIViewController {
             timerSlider.invalidate()
         }
     }
+    func updatePausedTime()
+    {
+        lblStartTime.removeFromSuperview()
+        lblEndTime.removeFromSuperview()
+        slider1.removeFromSuperview()
+        view1.addSubview(lblStartTime1)
+        view2.addSubview(lblEndTime1)
+        view3.addSubview(slider2)
+        //print(self.formatTime(fTime: self.curTimer!))
+        lblStartTime1.text = formatTime(fTime: curTimer!)
+        lblEndTime1.text = formatTime(fTime: remainedTimer!)
+        slider2.value = Float(curTimer!)
+        
+    }
     func updateSlider()
     {
-        sldCurrent.value = Float(player.currentTime)
-        
-        
+        slider1.value = Float(player.currentTime)
     }
     
     @IBAction func abtnStop(_ sender: Any) {
@@ -149,6 +169,9 @@ class ViewController: UIViewController {
                     isPlayed = true
                     isStop = false
                 }else{
+                    curTimer = Float(player.currentTime)//lblStartTime.text
+                    remainedTimer = durationTime! - curTimer!//lblEndTime.text
+                    updatePausedTime()
                     btnPlay.setImage(UIImage(named: "play"), for: .normal)
                     isPlayed = false
                     timerXoayAlbum.invalidate()

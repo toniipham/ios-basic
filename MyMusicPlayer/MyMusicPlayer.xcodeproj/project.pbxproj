@@ -13,6 +13,10 @@
 		52AE4B1E1DD1ABEF00AAE8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AE4B1D1DD1ABEF00AAE8BF /* Assets.xcassets */; };
 		52AE4B211DD1ABEF00AAE8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AE4B1F1DD1ABEF00AAE8BF /* LaunchScreen.storyboard */; };
 		52AE4B291DD1B21E00AAE8BF /* idontwannamissathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52AE4B281DD1B21E00AAE8BF /* idontwannamissathing.mp3 */; };
+		52DAECEB1DD40962000BCF47 /* Happy New Year - ABBA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52DAECE81DD40962000BCF47 /* Happy New Year - ABBA.mp3 */; };
+		52DAECEC1DD40962000BCF47 /* mama mia.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52DAECE91DD40962000BCF47 /* mama mia.mp3 */; };
+		52DAECED1DD40962000BCF47 /* man in the middle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 52DAECEA1DD40962000BCF47 /* man in the middle.mp3 */; };
+		52DAECEF1DD40992000BCF47 /* VCPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAECEE1DD40992000BCF47 /* VCPlaylist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		52AE4B201DD1ABEF00AAE8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52AE4B221DD1ABEF00AAE8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AE4B281DD1B21E00AAE8BF /* idontwannamissathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = idontwannamissathing.mp3; sourceTree = "<group>"; };
+		52DAECE81DD40962000BCF47 /* Happy New Year - ABBA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Happy New Year - ABBA.mp3"; sourceTree = "<group>"; };
+		52DAECE91DD40962000BCF47 /* mama mia.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mama mia.mp3"; sourceTree = "<group>"; };
+		52DAECEA1DD40962000BCF47 /* man in the middle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "man in the middle.mp3"; sourceTree = "<group>"; };
+		52DAECEE1DD40992000BCF47 /* VCPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCPlaylist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		52AE4B151DD1ABEF00AAE8BF /* MyMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				52DAECE81DD40962000BCF47 /* Happy New Year - ABBA.mp3 */,
+				52DAECE91DD40962000BCF47 /* mama mia.mp3 */,
+				52DAECEA1DD40962000BCF47 /* man in the middle.mp3 */,
 				52AE4B281DD1B21E00AAE8BF /* idontwannamissathing.mp3 */,
 				52AE4B161DD1ABEF00AAE8BF /* AppDelegate.swift */,
 				52AE4B181DD1ABEF00AAE8BF /* ViewController.swift */,
@@ -63,6 +74,7 @@
 				52AE4B1D1DD1ABEF00AAE8BF /* Assets.xcassets */,
 				52AE4B1F1DD1ABEF00AAE8BF /* LaunchScreen.storyboard */,
 				52AE4B221DD1ABEF00AAE8BF /* Info.plist */,
+				52DAECEE1DD40992000BCF47 /* VCPlaylist.swift */,
 			);
 			path = MyMusicPlayer;
 			sourceTree = "<group>";
@@ -128,6 +140,9 @@
 			files = (
 				52AE4B211DD1ABEF00AAE8BF /* LaunchScreen.storyboard in Resources */,
 				52AE4B291DD1B21E00AAE8BF /* idontwannamissathing.mp3 in Resources */,
+				52DAECED1DD40962000BCF47 /* man in the middle.mp3 in Resources */,
+				52DAECEB1DD40962000BCF47 /* Happy New Year - ABBA.mp3 in Resources */,
+				52DAECEC1DD40962000BCF47 /* mama mia.mp3 in Resources */,
 				52AE4B1E1DD1ABEF00AAE8BF /* Assets.xcassets in Resources */,
 				52AE4B1C1DD1ABEF00AAE8BF /* Main.storyboard in Resources */,
 			);
@@ -141,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AE4B191DD1ABEF00AAE8BF /* ViewController.swift in Sources */,
+				52DAECEF1DD40992000BCF47 /* VCPlaylist.swift in Sources */,
 				52AE4B171DD1ABEF00AAE8BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +319,7 @@
 				52AE4B271DD1ABEF00AAE8BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
