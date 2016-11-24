@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		522C73D81DCC3A0700D63405 /* VCMultiply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C73D71DCC3A0700D63405 /* VCMultiply.swift */; };
 		522C73DA1DCC3A1A00D63405 /* VCDivide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C73D91DCC3A1A00D63405 /* VCDivide.swift */; };
+=======
+>>>>>>> master
 		52FE272B1DC857A00076E6A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE272A1DC857A00076E6A0 /* AppDelegate.swift */; };
 		52FE272D1DC857A00076E6A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FE272C1DC857A00076E6A0 /* ViewController.swift */; };
 		52FE27301DC857A00076E6A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52FE272E1DC857A00076E6A0 /* Main.storyboard */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		522C73D71DCC3A0700D63405 /* VCMultiply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMultiply.swift; sourceTree = "<group>"; };
 		522C73D91DCC3A1A00D63405 /* VCDivide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDivide.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> master
 		52FE27271DC857A00076E6A0 /* MyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FE272A1DC857A00076E6A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52FE272C1DC857A00076E6A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +76,11 @@
 				52FE27361DC857A00076E6A0 /* Info.plist */,
 				52FE27601DC9EF520076E6A0 /* VCPlus.swift */,
 				52FE27621DC9EF5F0076E6A0 /* VCMinus.swift */,
+<<<<<<< HEAD
 				522C73D71DCC3A0700D63405 /* VCMultiply.swift */,
 				522C73D91DCC3A1A00D63405 /* VCDivide.swift */,
+=======
+>>>>>>> master
 			);
 			path = MyCalculator;
 			sourceTree = "<group>";
@@ -149,11 +158,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				52FE27611DC9EF520076E6A0 /* VCPlus.swift in Sources */,
+<<<<<<< HEAD
 				522C73D81DCC3A0700D63405 /* VCMultiply.swift in Sources */,
 				52FE27631DC9EF5F0076E6A0 /* VCMinus.swift in Sources */,
 				52FE272D1DC857A00076E6A0 /* ViewController.swift in Sources */,
 				52FE272B1DC857A00076E6A0 /* AppDelegate.swift in Sources */,
 				522C73DA1DCC3A1A00D63405 /* VCDivide.swift in Sources */,
+=======
+				52FE27631DC9EF5F0076E6A0 /* VCMinus.swift in Sources */,
+				52FE272D1DC857A00076E6A0 /* ViewController.swift in Sources */,
+				52FE272B1DC857A00076E6A0 /* AppDelegate.swift in Sources */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import UIKit
 
 class VCMinus: UIViewController {
 
+<<<<<<< HEAD
     
     @IBOutlet weak var lblResult: UILabel!
     
@@ -23,6 +24,14 @@ class VCMinus: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         lblResult.text = "Ket qua phep tinh la \(String(result))"
     }
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+>>>>>>> master
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

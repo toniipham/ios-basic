@@ -37,9 +37,12 @@
                                         <rect key="frame" x="178" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="."/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sX-qu-XIF"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfG-OM-2Ch">
                                         <rect key="frame" x="267" y="0.0" width="88" height="36"/>
@@ -100,25 +103,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="4"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXw-bY-EvM"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwI-tp-icp">
                                         <rect key="frame" x="89" y="0.0" width="88.5" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="5"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVD-Up-O0i"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETi-aM-cDJ">
                                         <rect key="frame" x="177.5" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="6"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOj-Fw-dc9"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rap-oY-bEy">
                                         <rect key="frame" x="266.5" y="0.0" width="88.5" height="36"/>
@@ -137,33 +149,45 @@
                                         <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="7"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uwk-QN-JuC"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGW-LL-Hu1">
                                         <rect key="frame" x="89" y="0.0" width="88.5" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="8"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFt-Un-jqE"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pa-D3-7BF">
                                         <rect key="frame" x="177.5" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="9"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnNum9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfB-p5-5nj"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htj-md-UCN">
                                         <rect key="frame" x="266.5" y="0.0" width="88.5" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="x"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtncalcMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kDv-GM-wjS"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                 </subviews>
                             </stackView>
@@ -174,9 +198,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="89" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="AC"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtnAC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xqf-nL-mgt"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g01-bM-BnZ">
                                         <rect key="frame" x="89" y="0.0" width="88.5" height="36"/>
@@ -192,16 +219,25 @@
                                         <rect key="frame" x="266.5" y="0.0" width="88.5" height="36"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="/"/>
+<<<<<<< HEAD
                                         <connections>
                                             <action selector="abtncalcDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucj-vh-bTJ"/>
                                         </connections>
+=======
+>>>>>>> master
                                     </button>
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-au-cTD">
+<<<<<<< HEAD
                                 <rect key="frame" x="10" y="94" width="355" height="133.5"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+=======
+                                <rect key="frame" x="10" y="94" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+>>>>>>> master
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -213,7 +249,10 @@
                             <constraint firstAttribute="trailing" secondItem="pTp-qk-J5N" secondAttribute="trailing" constant="10" id="CIg-at-gLl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eGZ-Hu-BGn" secondAttribute="bottom" constant="10" id="Clh-D6-0A4"/>
                             <constraint firstAttribute="trailing" secondItem="x7e-c8-1aA" secondAttribute="trailing" constant="10" id="QNO-u6-Tlj"/>
+<<<<<<< HEAD
                             <constraint firstItem="f6b-au-cTD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="WFp-PX-Y8w"/>
+=======
+>>>>>>> master
                             <constraint firstItem="ENi-ZT-6fJ" firstAttribute="top" secondItem="pTp-qk-J5N" secondAttribute="bottom" id="Xok-m3-Kaf"/>
                             <constraint firstItem="x7e-c8-1aA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Xpu-G6-sHJ"/>
                             <constraint firstItem="ENi-ZT-6fJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ZTz-1v-eYb"/>
@@ -251,7 +290,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-wq-l0v">
                                 <rect key="frame" x="10" y="120" width="355" height="66.5"/>
+<<<<<<< HEAD
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+=======
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+>>>>>>> master
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -278,6 +321,7 @@
             </objects>
             <point key="canvasLocation" x="1232.8" y="119.1904047976012"/>
         </scene>
+<<<<<<< HEAD
         <!--Multiply-->
         <scene sceneID="F2h-fi-ugV">
             <objects>
@@ -348,6 +392,8 @@
             </objects>
             <point key="canvasLocation" x="1860" y="764"/>
         </scene>
+=======
+>>>>>>> master
         <!--Minus-->
         <scene sceneID="RvL-TP-02g">
             <objects>
@@ -362,7 +408,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYE-eg-wz1">
                                 <rect key="frame" x="10" y="120" width="355" height="66.5"/>
+<<<<<<< HEAD
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+=======
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+>>>>>>> master
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -381,9 +431,12 @@
                             <constraint firstItem="MYE-eg-wz1" firstAttribute="top" secondItem="Q5M-SX-cCi" secondAttribute="bottom" constant="100" id="qRQ-lx-oK0"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
                     <connections>
                         <outlet property="lblResult" destination="MYE-eg-wz1" id="jeK-vc-UF6"/>
                     </connections>
+=======
+>>>>>>> master
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G2P-os-jd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
