@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		52D616461DE6BE5800F27F6F /* ViewController_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D616451DE6BE5800F27F6F /* ViewController_01.swift */; };
 		52D616481DE6BE6500F27F6F /* TableViewCell_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D616471DE6BE6500F27F6F /* TableViewCell_02.swift */; };
+		52D6164A1DE731A200F27F6F /* TableViewCell_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D616491DE731A200F27F6F /* TableViewCell_03.swift */; };
+		52D6164C1DE731B500F27F6F /* ViewController_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6164B1DE731B500F27F6F /* ViewController_03.swift */; };
 		52F0EED41DE6AA58007DF7FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F0EED31DE6AA58007DF7FC /* AppDelegate.swift */; };
 		52F0EED61DE6AA58007DF7FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F0EED51DE6AA58007DF7FC /* ViewController.swift */; };
 		52F0EED91DE6AA58007DF7FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F0EED71DE6AA58007DF7FC /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		52D616451DE6BE5800F27F6F /* ViewController_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_01.swift; sourceTree = "<group>"; };
 		52D616471DE6BE6500F27F6F /* TableViewCell_02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell_02.swift; sourceTree = "<group>"; };
+		52D616491DE731A200F27F6F /* TableViewCell_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell_03.swift; sourceTree = "<group>"; };
+		52D6164B1DE731B500F27F6F /* ViewController_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_03.swift; sourceTree = "<group>"; };
 		52F0EED01DE6AA58007DF7FC /* BaiTapJSon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapJSon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F0EED31DE6AA58007DF7FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F0EED51DE6AA58007DF7FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				52F0EEE51DE6AA7F007DF7FC /* TableViewCell_01.swift */,
 				52D616451DE6BE5800F27F6F /* ViewController_01.swift */,
 				52D616471DE6BE6500F27F6F /* TableViewCell_02.swift */,
+				52D616491DE731A200F27F6F /* TableViewCell_03.swift */,
+				52D6164B1DE731B500F27F6F /* ViewController_03.swift */,
 			);
 			path = BaiTapJSon;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 				52D616461DE6BE5800F27F6F /* ViewController_01.swift in Sources */,
 				52F0EED61DE6AA58007DF7FC /* ViewController.swift in Sources */,
 				52F0EED41DE6AA58007DF7FC /* AppDelegate.swift in Sources */,
+				52D6164A1DE731A200F27F6F /* TableViewCell_03.swift in Sources */,
+				52D6164C1DE731B500F27F6F /* ViewController_03.swift in Sources */,
 				52D616481DE6BE6500F27F6F /* TableViewCell_02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

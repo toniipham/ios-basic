@@ -13,11 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tblCategory: UITableView!
     
     var arrCatName: Array<String> = []
-    var arrCatID: Array<Int> = []
     var arrCatName3: Array<String> = []
-    var arrPCatID: Array<Int> = []
     var arrCatName4: Array<String> = []
-    var dictCatName3 = [String:String]()
+    
     var arrTemp: Array<String> = []
     var catName: String?
     
@@ -34,17 +32,17 @@ class ViewController: UIViewController {
 //            print(result)
             for arr in result{
                 let level = arr["categoryLevel"] as! Int
-                let parentId = arr["categoryParentId"] as! Int
-                let catId = arr["categoryId"] as! Int
+//                let parentId = arr["categoryParentId"] as! Int
+//                let catId = arr["categoryId"] as! Int
                 let str = arr["categoryName"] as! String
                 //print("Level: \(level) pid \(parentId) name \(str)")
                 //let arrTemp = str.components(separatedBy: " | ")
                 if level == 2{
                     arrCatName.append(str)
-                    arrCatID.append(catId)
+                    //arrCatID.append(catId)
                 }else if level == 3{
                     arrCatName3.append(str)
-                    arrPCatID.append(parentId)
+                    //arrPCatID.append(parentId)
                 }else if level == 4{
                     arrCatName4.append(str)
                 }
@@ -89,10 +87,11 @@ extension ViewController: UITableViewDataSource,UITableViewDelegate{
                 arrTemp.append(arr[1])
             }
         }
-        print(arrTemp)
+        //print(arrTemp)
         let destVC = storyboard?.instantiateViewController(withIdentifier: "VC01") as! ViewController_01
         destVC.arrCatNameLvl3 = arrTemp
         destVC.str = catName!
+        destVC.arrCatNameLvl4 = arrCatName4
         self.navigationController?.pushViewController(destVC, animated: true)
         arrTemp.removeAll()
     }

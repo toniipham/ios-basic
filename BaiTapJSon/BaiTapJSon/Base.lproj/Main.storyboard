@@ -98,6 +98,49 @@
             </objects>
             <point key="canvasLocation" x="1733.5999999999999" y="123.68815592203899"/>
         </scene>
+        <!--View Controller03-->
+        <scene sceneID="bzg-4i-IgY">
+            <objects>
+                <viewController storyboardIdentifier="VC03" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wEp-u9-5l9" customClass="ViewController_03" customModule="BaiTapJSon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oFu-tR-PgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="eel-gO-ddF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Is-E8-kdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wri-xM-6hi">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell_03" rowHeight="132" id="6Vd-Xv-XGI" customClass="TableViewCell_03" customModule="BaiTapJSon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Vd-Xv-XGI" id="Irr-E7-sLZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wri-xM-6hi" firstAttribute="trailing" secondItem="6Is-E8-kdh" secondAttribute="trailingMargin" id="1ra-2E-axO"/>
+                            <constraint firstItem="Wri-xM-6hi" firstAttribute="top" secondItem="oFu-tR-PgE" secondAttribute="bottom" id="P7l-HL-FaR"/>
+                            <constraint firstItem="eel-gO-ddF" firstAttribute="top" secondItem="Wri-xM-6hi" secondAttribute="bottom" id="eGX-3c-Q7Q"/>
+                            <constraint firstItem="Wri-xM-6hi" firstAttribute="leading" secondItem="6Is-E8-kdh" secondAttribute="leadingMargin" id="n0V-QP-wtr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblCatNameLvl31" destination="Wri-xM-6hi" id="YgH-xU-TGg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZP4-1U-7uI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408.8000000000002" y="123.68815592203899"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kbC-xS-O9a">
             <objects>

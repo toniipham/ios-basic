@@ -11,7 +11,10 @@ import UIKit
 class ViewController_01: UIViewController {
 
     var arrCatNameLvl3: Array<String> = []
+    var arrCatNameLvl4: Array<String> = []
     var str: String = ""
+    var arrTemp: Array<String> = []
+    var catName: String?
     
     @IBOutlet weak var tblCatNameLvl3: UITableView!
     
@@ -53,5 +56,21 @@ extension ViewController_01: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell_02") as! TableViewCell_02
         cell.textLabel?.text = arrCatNameLvl3[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        catName = arrCatNameLvl3[indexPath.row]
+        
+        for item in arrCatNameLvl4{
+            let arr = item.components(separatedBy: " | ")
+            if catName == arr[1]{
+                arrTemp.append(arr[2])
+            }
+        }
+        //print(arrTemp)
+        let destVC = storyboard?.instantiateViewController(withIdentifier: "VC03") as! ViewController_03
+        destVC.arrCatNameLvl31 = arrTemp
+        destVC.str = catName!
+        self.navigationController?.pushViewController(destVC, animated: true)
+        arrTemp.removeAll()
     }
 }
