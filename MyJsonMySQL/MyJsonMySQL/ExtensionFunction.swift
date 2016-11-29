@@ -43,16 +43,18 @@ class ExtensionFunction{
                     // and create mime-type
                     let mimeType = "image/jpg"
                     body.append("--\(boundary)\r\n".data(using: .utf8)!)
-                    body.append("Content-Deposition: form-data; name=\"\(param.key)\"; FileName=\"\(fileName)\"\r\n".data(using: .utf8)!)
+                    body.append("Content-Disposition: form-data; name=\"\(param.key)\"; FileName=\"\(fileName)\"\r\n".data(using: .utf8)!)
                     body.append("Content-Type: \(mimeType)\r\n\r\n".data(using: .utf8)!)
                     body.append(dataPhoto!)
                     body.append("\r\n".data(using: .utf8)!)
                 }else{
                     // not using image
-                    print("\(param.key) \(param.value)")
+                    //print("\(param.key) \(param.value)")
                     body.append("--\(boundary)\r\n".data(using: .utf8)!)
-                    body.append("Content-Deposition: form-data; name=\"\(param.key)\"\r\n".data(using: .utf8)!)
+                    body.append("Content-Disposition: form-data; name=\"\(param.key)\"\r\n\r\n".data(using: .utf8)!)
                     body.append("\(param.value)\r\n".data(using: .utf8)!)
+                    body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+                    
                 }
             }
             request.httpBody = body as Data
@@ -68,6 +70,7 @@ class ExtensionFunction{
                     let result = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
                     DispatchQueue.main.async {
                         completionHandler(result)
+                        //print(result)
                     }
                 }catch{
                     completionHandler(nil)

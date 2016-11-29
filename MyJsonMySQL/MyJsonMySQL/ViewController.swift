@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //var arrBH: Array<String> = ["abc","123","qwerty"]
     var arrTemp: Array<BaiHat> = []
-    
+    let exFunc = ExtensionFunction()
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -58,11 +58,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func abtnRegister(_ sender: Any) {
         let strWebsite = "http://iosapp.pe.hu/pushUsers.php"
-        let exFunc = ExtensionFunction()
+        
         let dictPara: Dictionary<String,String> = ["username":txtUsername.text!,"password":txtPassword.text!,"hoten":"abc"]
         
         exFunc.getJSONData(fromDomain: strWebsite, Params: dictPara, MethodHTTP: "post", completionHandler: {(result) in
-            print("ok\r\n\(result)")
+            //print("ok\r\n\(result)")
         })
     }
     
