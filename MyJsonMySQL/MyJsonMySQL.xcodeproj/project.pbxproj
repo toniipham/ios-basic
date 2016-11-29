@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		522C044D1DED1CF70055C0BA /* ViewController_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C044C1DED1CF70055C0BA /* ViewController_01.swift */; };
+		522C044F1DED3D830055C0BA /* ExtensionFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C044E1DED3D830055C0BA /* ExtensionFunction.swift */; };
+		52E446E21DE92D0700B62BCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E446E11DE92D0700B62BCE /* AppDelegate.swift */; };
+		52E446E41DE92D0700B62BCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E446E31DE92D0700B62BCE /* ViewController.swift */; };
+		52E446E71DE92D0700B62BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E446E51DE92D0700B62BCE /* Main.storyboard */; };
+		52E446E91DE92D0700B62BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E446E81DE92D0700B62BCE /* Assets.xcassets */; };
+		52E446EC1DE92D0700B62BCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E446EA1DE92D0700B62BCE /* LaunchScreen.storyboard */; };
+		52E446F41DE92FC200B62BCE /* TableViewCell_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E446F31DE92FC200B62BCE /* TableViewCell_01.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		522C044C1DED1CF70055C0BA /* ViewController_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_01.swift; sourceTree = "<group>"; };
+		522C044E1DED3D830055C0BA /* ExtensionFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFunction.swift; sourceTree = "<group>"; };
+		52E446DE1DE92D0700B62BCE /* MyJsonMySQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyJsonMySQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E446E11DE92D0700B62BCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52E446E31DE92D0700B62BCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52E446E61DE92D0700B62BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52E446E81DE92D0700B62BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52E446EB1DE92D0700B62BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52E446ED1DE92D0700B62BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E446F31DE92FC200B62BCE /* TableViewCell_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell_01.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52E446DB1DE92D0700B62BCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52E446D51DE92D0700B62BCE = {
+			isa = PBXGroup;
+			children = (
+				52E446E01DE92D0700B62BCE /* MyJsonMySQL */,
+				52E446DF1DE92D0700B62BCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52E446DF1DE92D0700B62BCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E446DE1DE92D0700B62BCE /* MyJsonMySQL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52E446E01DE92D0700B62BCE /* MyJsonMySQL */ = {
+			isa = PBXGroup;
+			children = (
+				52E446E11DE92D0700B62BCE /* AppDelegate.swift */,
+				52E446E31DE92D0700B62BCE /* ViewController.swift */,
+				52E446E51DE92D0700B62BCE /* Main.storyboard */,
+				52E446E81DE92D0700B62BCE /* Assets.xcassets */,
+				52E446EA1DE92D0700B62BCE /* LaunchScreen.storyboard */,
+				52E446ED1DE92D0700B62BCE /* Info.plist */,
+				52E446F31DE92FC200B62BCE /* TableViewCell_01.swift */,
+				522C044C1DED1CF70055C0BA /* ViewController_01.swift */,
+				522C044E1DED3D830055C0BA /* ExtensionFunction.swift */,
+			);
+			path = MyJsonMySQL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52E446DD1DE92D0700B62BCE /* MyJsonMySQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E446F01DE92D0700B62BCE /* Build configuration list for PBXNativeTarget "MyJsonMySQL" */;
+			buildPhases = (
+				52E446DA1DE92D0700B62BCE /* Sources */,
+				52E446DB1DE92D0700B62BCE /* Frameworks */,
+				52E446DC1DE92D0700B62BCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyJsonMySQL;
+			productName = MyJsonMySQL;
+			productReference = 52E446DE1DE92D0700B62BCE /* MyJsonMySQL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52E446D61DE92D0700B62BCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					52E446DD1DE92D0700B62BCE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = QN3M8J4AVX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52E446D91DE92D0700B62BCE /* Build configuration list for PBXProject "MyJsonMySQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52E446D51DE92D0700B62BCE;
+			productRefGroup = 52E446DF1DE92D0700B62BCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52E446DD1DE92D0700B62BCE /* MyJsonMySQL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E446DC1DE92D0700B62BCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E446EC1DE92D0700B62BCE /* LaunchScreen.storyboard in Resources */,
+				52E446E91DE92D0700B62BCE /* Assets.xcassets in Resources */,
+				52E446E71DE92D0700B62BCE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52E446DA1DE92D0700B62BCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E446F41DE92FC200B62BCE /* TableViewCell_01.swift in Sources */,
+				522C044D1DED1CF70055C0BA /* ViewController_01.swift in Sources */,
+				52E446E41DE92D0700B62BCE /* ViewController.swift in Sources */,
+				52E446E21DE92D0700B62BCE /* AppDelegate.swift in Sources */,
+				522C044F1DED3D830055C0BA /* ExtensionFunction.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52E446E51DE92D0700B62BCE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52E446E61DE92D0700B62BCE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52E446EA1DE92D0700B62BCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52E446EB1DE92D0700B62BCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52E446EE1DE92D0700B62BCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52E446EF1DE92D0700B62BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52E446F11DE92D0700B62BCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QN3M8J4AVX;
+				INFOPLIST_FILE = MyJsonMySQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyOS.MyJsonMySQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52E446F21DE92D0700B62BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QN3M8J4AVX;
+				INFOPLIST_FILE = MyJsonMySQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MyOS.MyJsonMySQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E446D91DE92D0700B62BCE /* Build configuration list for PBXProject "MyJsonMySQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E446EE1DE92D0700B62BCE /* Debug */,
+				52E446EF1DE92D0700B62BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E446F01DE92D0700B62BCE /* Build configuration list for PBXNativeTarget "MyJsonMySQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E446F11DE92D0700B62BCE /* Debug */,
+				52E446F21DE92D0700B62BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52E446D61DE92D0700B62BCE /* Project object */;
+}
