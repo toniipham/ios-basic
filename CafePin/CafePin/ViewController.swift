@@ -9,26 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    // MARK: Variables
-    var db: DBFIRApp! = nil
-    var arrBaiHat: Array<BaiHat> = []
-    var extFunc: ExtensionFunction! = nil
-    var nodeBaiHat: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         extFunc = ExtensionFunction()
-        
-        db = DBFIRApp()
+       
         getData()
         
         tblBaiHat.delegate = self
         tblBaiHat.dataSource = self
         
+        tblBaiHat.estimatedRowHeight = 80
+        tblBaiHat.rowHeight = UITableViewAutomaticDimension
     }
-
+    
     func getData(){
         let str = "test/test1/test2/TESTDATA"
         db.loadData(urlString: str, completion: {(data) in
@@ -37,10 +32,13 @@ class ViewController: UIViewController {
             for tdValue in tdValues{
                 self.arrBaiHat.append(BaiHat(obj: tdValue.value))
             }
+            DispatchQueue.main.async {
+                
+                self.tblBaiHat.reloadData()
+            }
         })
-        DispatchQueue.main.async {
-            self.tblBaiHat.reloadData()
-        }
+        let strSort = "test/test1/test2/TESTDATA"
+        db.sortByNode(urlString: strSort)
     }
     func addNewData(){
         var str = "test/test1/test2/TESTDATA"
@@ -48,20 +46,44 @@ class ViewController: UIViewController {
         str += "/\(nodeBaiHat)"
         let id = extFunc.generateID()
         let name = extFunc.getDate()
-        let dict = ["id":id,"name":name]
+        let node = nodeBaiHat
+        let dict = ["id":id,"name":name,"node":node]
         db.insertData(urlString: str, params: dict as NSDictionary)
     }
-    func updateBaiHat(){
-        let str = "test/test1/test2/TESTDATA/\(nodeBaiHat)"
+    func updateBaiHat(node: String){
+        let str = "test/test1/test2/TESTDATA/\(node)"
         let id = extFunc.generateID()
         let name = extFunc.getTime()
         let dict = ["id":id,"name":name]
         db.updateData(urlString: str, params: dict as NSDictionary)
     }
+    func deleteBaiHat(node: String){
+        let str = "test/test1/test2/TESTDATA/\(node)"
+        
+        db.deleteData(urlString: str)
+
+    }
+    func deleteAll(){
+        if let curIndexPath = tblBaiHat.indexPathForSelectedRow {
+            arrBaiHat.remove(at: curIndexPath.row)
+            let str = "test/test1/test2/TESTDATA"
+            
+            db.delete(urlString: str)
+
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Variables
+    var db: DBFIRApp = DBFIRApp()
+    var arrBaiHat: Array<BaiHat> = []
+    var extFunc: ExtensionFunction! = nil
+    var nodeBaiHat: String = ""
+
     
     //MARK: OUTLET
     @IBOutlet weak var tblBaiHat: UITableView!
@@ -71,7 +93,23 @@ class ViewController: UIViewController {
         
     }
     @IBAction func abtnUpdate(_ sender: Any) {
-        updateBaiHat()
+        if let curIndexPath = tblBaiHat.indexPathForSelectedRow {
+            if let node = arrBaiHat[curIndexPath.row].nodeBH{
+                //print(node)
+                updateBaiHat(node: node)
+            }
+        }
+    }
+    @IBAction func abtnDelete(_ sender: Any) {
+        if let curIndexPath = tblBaiHat.indexPathForSelectedRow {
+            if let node = arrBaiHat[curIndexPath.row].nodeBH{
+                //print(node)
+                deleteBaiHat(node: node)
+            }
+        }
+    }
+    @IBAction func abtnDeleteAll(_ sender: Any) {
+        deleteAll()
     }
     
 
@@ -82,8 +120,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         return arrBaiHat.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell_01")
-        cell?.textLabel?.text = arrBaiHat[indexPath.row].tenBH
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell_01") as! TableViewCell_01
+        cell.lblID.text = arrBaiHat[indexPath.row].idBH
+        cell.lblName.text = arrBaiHat[indexPath.row].tenBH
+        return cell
     }
+    
 }

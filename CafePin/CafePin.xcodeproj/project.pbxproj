@@ -14,7 +14,7 @@
 		529AEA211DF002DA004C4425 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529AEA1F1DF002DA004C4425 /* LaunchScreen.storyboard */; };
 		529AEA2E1DF06D7E004C4425 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 529AEA2D1DF06D7E004C4425 /* GoogleService-Info.plist */; };
 		529AEA301DF06DB1004C4425 /* BaiHat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA2F1DF06DB1004C4425 /* BaiHat.swift */; };
-		529AEA321DF06DC2004C4425 /* db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA311DF06DC2004C4425 /* db.swift */; };
+		529AEA321DF06DC2004C4425 /* DBFIRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA311DF06DC2004C4425 /* DBFIRApp.swift */; };
 		529AEA341DF11B88004C4425 /* TableViewCell_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA331DF11B88004C4425 /* TableViewCell_01.swift */; };
 		529AEA361DF123B1004C4425 /* ExtensionFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA351DF123B1004C4425 /* ExtensionFunction.swift */; };
 		9A7D5E98193A0260AA8A6B58 /* Pods_CafePin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAA3BBDB02DDFD3444B51DB /* Pods_CafePin.framework */; };
@@ -31,7 +31,7 @@
 		529AEA221DF002DA004C4425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		529AEA2D1DF06D7E004C4425 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		529AEA2F1DF06DB1004C4425 /* BaiHat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiHat.swift; sourceTree = "<group>"; };
-		529AEA311DF06DC2004C4425 /* db.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = db.swift; sourceTree = "<group>"; };
+		529AEA311DF06DC2004C4425 /* DBFIRApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFIRApp.swift; sourceTree = "<group>"; };
 		529AEA331DF11B88004C4425 /* TableViewCell_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell_01.swift; sourceTree = "<group>"; };
 		529AEA351DF123B1004C4425 /* ExtensionFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionFunction.swift; sourceTree = "<group>"; };
 		FAB95903BC2CC7AB4E4F8431 /* Pods-CafePin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CafePin/Pods-CafePin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				529AEA1F1DF002DA004C4425 /* LaunchScreen.storyboard */,
 				529AEA221DF002DA004C4425 /* Info.plist */,
 				529AEA2F1DF06DB1004C4425 /* BaiHat.swift */,
-				529AEA311DF06DC2004C4425 /* db.swift */,
+				529AEA311DF06DC2004C4425 /* DBFIRApp.swift */,
 				529AEA331DF11B88004C4425 /* TableViewCell_01.swift */,
 				529AEA351DF123B1004C4425 /* ExtensionFunction.swift */,
 			);
@@ -231,7 +231,7 @@
 				529AEA341DF11B88004C4425 /* TableViewCell_01.swift in Sources */,
 				529AEA361DF123B1004C4425 /* ExtensionFunction.swift in Sources */,
 				529AEA191DF002DA004C4425 /* ViewController.swift in Sources */,
-				529AEA321DF06DC2004C4425 /* db.swift in Sources */,
+				529AEA321DF06DC2004C4425 /* DBFIRApp.swift in Sources */,
 				529AEA301DF06DB1004C4425 /* BaiHat.swift in Sources */,
 				529AEA171DF002DA004C4425 /* AppDelegate.swift in Sources */,
 			);

@@ -22,9 +22,10 @@ class DBFIRApp{
     }
     func loadData(urlString: String, completion: @escaping (Any)-> ()){
         // ex: read from root test->test1->test2 and retrieve id and name of testdata
-        refRoot.child(urlString).observe(FIRDataEventType.value, with: {(data) in
-            let obj: Dictionary<String,Any> = data.value as! Dictionary<String,Any>
-            completion(obj)
+        refRoot.child(urlString).observe(FIRDataEventType.value, with: {(snapshot) in
+            if let data = snapshot.value as? Dictionary<String,Any>{
+                completion(data)
+            }
         })
     }
     func insertData(urlString: String, params: NSDictionary){
@@ -34,5 +35,14 @@ class DBFIRApp{
     }
     func updateData(urlString: String, params: NSDictionary){
         refRoot.child(urlString).updateChildValues(params as! [AnyHashable : Any])
+    }
+    func deleteData(urlString: String){
+        refRoot.child(urlString).setValue(nil)
+    }
+    func delete(urlString: String) {
+        refRoot.child(urlString).removeValue()
+    }
+    func sortByNode(urlString: String){
+        refRoot.child(urlString).queryOrdered(byChild: "node")
     }
 }
