@@ -9,12 +9,16 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import GoogleMobileAds
 
 class DBFIRApp{
     var refRoot:FIRDatabaseReference! = nil
         
     init() {
         FIRApp.configure()
+        // admob id
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
+        
         refRoot = FIRDatabase.database().reference()
     }
     func getNewNode(urlString: String)-> String{
@@ -44,5 +48,12 @@ class DBFIRApp{
     }
     func sortByNode(urlString: String){
         refRoot.child(urlString).queryOrdered(byChild: "node")
+    }
+    
+    //admob
+    func showBanner(vwBanner: GADBannerView, rootView: UIViewController){
+        vwBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        vwBanner.rootViewController = rootView
+        vwBanner.load(GADRequest())
     }
 }

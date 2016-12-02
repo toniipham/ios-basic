@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         extFunc = ExtensionFunction()
-       
+        db.showBanner(vwBanner: vwAdMob,rootView: self)
         getData()
         
         tblBaiHat.delegate = self
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
         tblBaiHat.estimatedRowHeight = 80
         tblBaiHat.rowHeight = UITableViewAutomaticDimension
     }
+    
     
     func getData(){
         let str = "test/test1/test2/TESTDATA"
@@ -111,6 +113,8 @@ class ViewController: UIViewController {
     @IBAction func abtnDeleteAll(_ sender: Any) {
         deleteAll()
     }
+    // admob
+    @IBOutlet weak var vwAdMob: GADBannerView!
     
 
 }
@@ -125,5 +129,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         cell.lblName.text = arrBaiHat[indexPath.row].tenBH
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            arrBaiHat.remove(at: indexPath.row)
+            if let node = arrBaiHat[indexPath.row].nodeBH{
+                print(node)
+                deleteBaiHat(node: node)
+            }
+        }
+        tblBaiHat.reloadData()
+    }
 }

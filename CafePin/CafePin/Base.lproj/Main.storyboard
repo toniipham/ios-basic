@@ -96,6 +96,14 @@
                                     <action selector="abtnDeleteAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="alv-Wn-jMg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-MW-2Ic" customClass="GADBannerView">
+                                <rect key="frame" x="27.5" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Jl-m3-n33"/>
+                                    <constraint firstAttribute="width" constant="320" id="eic-AJ-RmQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -108,6 +116,8 @@
                             <constraint firstItem="YcD-55-8Qh" firstAttribute="leading" secondItem="Hsl-aV-HGS" secondAttribute="trailing" constant="5" id="XkW-1d-hSr"/>
                             <constraint firstItem="YcD-55-8Qh" firstAttribute="width" secondItem="07C-xI-fm0" secondAttribute="width" id="a3p-bA-HZL"/>
                             <constraint firstItem="YcD-55-8Qh" firstAttribute="top" secondItem="07C-xI-fm0" secondAttribute="top" id="by4-Yn-rDQ"/>
+                            <constraint firstItem="TNx-MW-2Ic" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hSv-OS-92g"/>
+                            <constraint firstAttribute="bottom" secondItem="TNx-MW-2Ic" secondAttribute="bottom" id="j6E-hb-4uq"/>
                             <constraint firstItem="fZ4-Uy-dB1" firstAttribute="top" secondItem="07C-xI-fm0" secondAttribute="top" id="j9r-YF-bzw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="07C-xI-fm0" secondAttribute="bottom" constant="100" id="kGu-ce-9qY"/>
                             <constraint firstItem="Hsl-aV-HGS" firstAttribute="top" secondItem="fZ4-Uy-dB1" secondAttribute="top" id="oyv-wt-3Cc"/>
@@ -118,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="tblBaiHat" destination="kdf-R8-gOx" id="dVd-vJ-qXS"/>
+                        <outlet property="vwAdMob" destination="TNx-MW-2Ic" id="wvP-6U-Apr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
