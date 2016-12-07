@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import FBSDKShareKit
+import FBSDKCoreKit
+import Bolts
 
 class ViewController: UIViewController {
     @IBOutlet weak var tblRestaurant: UITableView!
@@ -51,6 +54,8 @@ class ViewController: UIViewController {
     */
     
     var fetchResult: NSFetchedResultsController<RestaurantMO>!
+    var searchBarController: UISearchController!
+    var searchResults:[RestaurantMO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +67,14 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target:nil, action: nil)
         
         navigationController?.hidesBarsOnSwipe = true
+        searchBarController = UISearchController(searchResultsController: nil)
+        tblRestaurant.tableHeaderView = searchBarController.searchBar
+        searchBarController.searchResultsUpdater = self
+        searchBarController.dimsBackgroundDuringPresentation = false
+        searchBarController.searchBar.placeholder = "Search restaurants..."
+        searchBarController.searchBar.tintColor = UIColor.white
+        searchBarController.searchBar.barTintColor = UIColor(red: 224/255.0, green:
+            130/255.0, blue: 131/255.0, alpha: 1)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -132,7 +145,8 @@ class ViewController: UIViewController {
         if segue.identifier == "ShowRestaurantDetail" {
             if let indexPathSelected = tblRestaurant.indexPathForSelectedRow{
                 let vc = segue.destination as! RestaurantDetailViewController
-                vc.restaurants = restaurants[indexPathSelected.row]
+                let restaurantSearching = (searchBarController.isActive) ? searchResults[indexPathSelected.row] : restaurants[indexPathSelected.row]
+                vc.restaurants = restaurantSearching
             }
         }
     }
@@ -141,22 +155,47 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        searchBarController.searchBar.text = ""
+        searchBarController.dismiss(animated: true, completion: nil)
+    }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate{
+extension ViewController: UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, UISearchResultsUpdating{
+    
+    func filterContents(for searchText: String){
+        searchResults = restaurants.filter({(restaurant)->Bool in
+            if let name = restaurant.name, let location = restaurant.location{
+                return name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+            }
+            return false
+        })
+    }
+    func updateSearchResults(for searchController: UISearchController) {
+        if let txtSearching = searchController.searchBar.text{
+            filterContents(for: txtSearching)
+            self.tblRestaurant.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count
+        if searchBarController.isActive{
+            return searchResults.count
+        }else{
+            return restaurants.count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! RestaurantTableViewCell
-        cell.imgThumbnail.image = UIImage(data: restaurants[indexPath.row].image as! Data)
         
+        let restaurantSearching = (searchBarController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
+        cell.imgThumbnail.image = UIImage(data: restaurantSearching.image as! Data)
         //cell.imgThumbnail.image = UIImage(named: restaurants[indexPath.row].image)
-        cell.lblName.text = restaurants[indexPath.row].name
-        cell.lblLocation.text = restaurants[indexPath.row].location
-        cell.lblType.text = restaurants[indexPath.row].type
+        cell.lblName.text = restaurantSearching.name
+        cell.lblLocation.text = restaurantSearching.location
+        cell.lblType.text = restaurantSearching.type
         
-        if self.restaurants[indexPath.row].isVisited{
+        if restaurantSearching.isVisited{
             cell.accessoryType = .checkmark
         }else{
             cell.accessoryType = .none
@@ -202,15 +241,52 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate, NSFetchedR
 //        }
 //        tblRestaurant.reloadData()
 //    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchBarController.isActive{
+            return false
+        }else{
+            return true
+        }
+    }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        // share on face
-        let shareSocial = UITableViewRowAction(style: .default, title: "Share", handler: {
+        // share on facebook
+        let shareFB = UITableViewRowAction(style: .default, title: "Facebook", handler: {(action, indexPath) in
+            let msg = "Just check in at \(self.restaurants[indexPath.row].name!)"
+            guard let img = UIImage(data: self.restaurants[indexPath.row].image as! Data) else{
+                return
+            }
+            
+            let photo = FBSDKSharePhoto()
+            photo.image = img
+            
+            let photoContent = FBSDKSharePhotoContent()
+            photoContent.ref = msg
+            photoContent.photos = [photo]
+            photoContent.hashtag = FBSDKHashtag(string: msg)
+            
+            let fbDialog = FBSDKShareDialog()
+            fbDialog.fromViewController = self
+            fbDialog.shareContent = photoContent
+            fbDialog.mode = .automatic
+            let isShowed = fbDialog.show()
+            if isShowed == false{
+                let alert = UIAlertController(title: "Error", message: "Please login Facebook first", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            //FBSDKShareDialog.show(from: self, with: sharedContent, delegate: nil)
+        })
+        // share
+        let shareAction = UITableViewRowAction(style: .default, title: "Share", handler: {
             (action,indexPath) in
             let msg = "Just check in at \(self.restaurants[indexPath.row].name!)"
             guard let img = UIImage(data: self.restaurants[indexPath.row].image as! Data) else{
                 return
             }
             let activityController = UIActivityViewController(activityItems: [msg, img], applicationActivities: nil)
+            activityController.popoverPresentationController?.sourceView = self.view
+            
             self.present(activityController, animated: true, completion: nil)
         })
         // delete
@@ -223,9 +299,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate, NSFetchedR
                 self.tblRestaurant.reloadData()
             }
         })
-        shareSocial.backgroundColor = UIColor(red: 48/255, green: 173/255, blue: 99/255, alpha: 0.8)
+        shareFB.backgroundColor = UIColor(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
+        shareAction.backgroundColor = UIColor(red: 48/255, green: 173/255, blue: 99/255, alpha: 0.8)
         deleteAction.backgroundColor = UIColor(red: 202.0/255.0, green: 202.0/255.0,
                                                blue: 203.0/255.0, alpha: 0.6)
-        return [deleteAction, shareSocial]
+        return [deleteAction, shareAction, shareFB]
     }
 }

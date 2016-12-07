@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		520E042C1DF555B600F2E83B /* AddNewRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E042B1DF555B600F2E83B /* AddNewRestaurant.swift */; };
+		5223091A1DF7F1AF00697FBE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522309191DF7F1AF00697FBE /* Bolts.framework */; };
+		5223091D1DF7F1DD00697FBE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5223091B1DF7F1DD00697FBE /* FBSDKCoreKit.framework */; };
+		5223091E1DF7F1DD00697FBE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5223091C1DF7F1DD00697FBE /* FBSDKShareKit.framework */; };
 		522C043B1DEC22DB0055C0BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C043A1DEC22DB0055C0BA /* AppDelegate.swift */; };
 		522C043D1DEC22DB0055C0BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C043C1DEC22DB0055C0BA /* ViewController.swift */; };
 		522C04401DEC22DB0055C0BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522C043E1DEC22DB0055C0BA /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		520E042B1DF555B600F2E83B /* AddNewRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRestaurant.swift; sourceTree = "<group>"; };
+		522309191DF7F1AF00697FBE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		5223091B1DF7F1DD00697FBE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5223091C1DF7F1DD00697FBE /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		522C04371DEC22DB0055C0BA /* SimpleTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522C043A1DEC22DB0055C0BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		522C043C1DEC22DB0055C0BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5223091E1DF7F1DD00697FBE /* FBSDKShareKit.framework in Frameworks */,
+				5223091A1DF7F1AF00697FBE /* Bolts.framework in Frameworks */,
+				5223091D1DF7F1DD00697FBE /* FBSDKCoreKit.framework in Frameworks */,
 				529AEA2C1DF063E5004C4425 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +107,9 @@
 		529AEA2A1DF063E5004C4425 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5223091B1DF7F1DD00697FBE /* FBSDKCoreKit.framework */,
+				5223091C1DF7F1DD00697FBE /* FBSDKShareKit.framework */,
+				522309191DF7F1AF00697FBE /* Bolts.framework */,
 				529AEA2B1DF063E5004C4425 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -315,6 +327,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QN3M8J4AVX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SimpleTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyOS.SimpleTable;
@@ -328,6 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QN3M8J4AVX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SimpleTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyOS.SimpleTable;
