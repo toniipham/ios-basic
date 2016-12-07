@@ -15,7 +15,9 @@ class DBFIRApp{
     var refRoot:FIRDatabaseReference! = nil
         
     init() {
-        FIRApp.configure()
+        if FIRApp.defaultApp() == nil{
+            FIRApp.configure()
+        }
         // admob id
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3940256099942544~1458002511")
         
@@ -55,5 +57,38 @@ class DBFIRApp{
         vwBanner.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         vwBanner.rootViewController = rootView
         vwBanner.load(GADRequest())
+    }
+    // sign up by email
+    func createAccount(params: NSDictionary,completion: @escaping (FIRUser?,Error?)-> ()){
+        FIRAuth.auth()?.createUser(withEmail: params.value(forKey: "email") as! String, password: params.value(forKey: "password")as! String){(user,error) in
+            completion(user,error)
+            
+        }
+    }
+    // sign in by email
+    func logByEmailAccount(params: NSDictionary, completion: @escaping(Dictionary<String,String>, String?)->()){
+        FIRAuth.auth()?.signIn(withEmail: params.value(forKey: "email") as! String, password: params.value(forKey: "password") as! String, completion: {(user,error) in
+            var dict: Dictionary<String,String> = [:]
+            if user != nil{
+                dict["username"] = user?.displayName
+                dict["email"] = user?.email
+                dict["uid"] = user?.uid
+            }
+            completion(dict,error?.localizedDescription)
+        })
+    }
+    // log out
+    func logOut(completion: @escaping(String?)->()){
+        guard let user = FIRAuth.auth()?.currentUser  else {
+            return
+        }
+        try! FIRAuth.auth()?.signOut()
+        completion(user.displayName)
+    }
+    // reset password
+    func resetPassword(params: NSDictionary, completion: @escaping (String?)->()){
+        FIRAuth.auth()?.sendPasswordReset(withEmail: params.value(forKey: "email") as! String, completion:{(error) in
+            completion(error?.localizedDescription)
+        })
     }
 }

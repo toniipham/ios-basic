@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522308E81DF5B71A00697FBE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522308E71DF5B71A00697FBE /* SignUpViewController.swift */; };
+		522308EA1DF5B72F00697FBE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522308E91DF5B72F00697FBE /* SignInViewController.swift */; };
+		522308EC1DF5B73A00697FBE /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522308EB1DF5B73A00697FBE /* ResetPasswordViewController.swift */; };
+		5223090C1DF7078600697FBE /* ViewController_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5223090B1DF7078600697FBE /* ViewController_01.swift */; };
 		529AEA171DF002DA004C4425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA161DF002DA004C4425 /* AppDelegate.swift */; };
 		529AEA191DF002DA004C4425 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AEA181DF002DA004C4425 /* ViewController.swift */; };
 		529AEA1C1DF002DA004C4425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529AEA1A1DF002DA004C4425 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 
 /* Begin PBXFileReference section */
 		0EAA3BBDB02DDFD3444B51DB /* Pods_CafePin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafePin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		522308E71DF5B71A00697FBE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		522308E91DF5B72F00697FBE /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		522308EB1DF5B73A00697FBE /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		5223090B1DF7078600697FBE /* ViewController_01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_01.swift; sourceTree = "<group>"; };
 		529AEA131DF002DA004C4425 /* CafePin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafePin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529AEA161DF002DA004C4425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		529AEA181DF002DA004C4425 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +90,10 @@
 				529AEA311DF06DC2004C4425 /* DBFIRApp.swift */,
 				529AEA331DF11B88004C4425 /* TableViewCell_01.swift */,
 				529AEA351DF123B1004C4425 /* ExtensionFunction.swift */,
+				522308E71DF5B71A00697FBE /* SignUpViewController.swift */,
+				522308E91DF5B72F00697FBE /* SignInViewController.swift */,
+				522308EB1DF5B73A00697FBE /* ResetPasswordViewController.swift */,
+				5223090B1DF7078600697FBE /* ViewController_01.swift */,
 			);
 			path = CafePin;
 			sourceTree = "<group>";
@@ -228,10 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522308EC1DF5B73A00697FBE /* ResetPasswordViewController.swift in Sources */,
 				529AEA341DF11B88004C4425 /* TableViewCell_01.swift in Sources */,
+				522308E81DF5B71A00697FBE /* SignUpViewController.swift in Sources */,
 				529AEA361DF123B1004C4425 /* ExtensionFunction.swift in Sources */,
 				529AEA191DF002DA004C4425 /* ViewController.swift in Sources */,
+				522308EA1DF5B72F00697FBE /* SignInViewController.swift in Sources */,
 				529AEA321DF06DC2004C4425 /* DBFIRApp.swift in Sources */,
+				5223090C1DF7078600697FBE /* ViewController_01.swift in Sources */,
 				529AEA301DF06DB1004C4425 /* BaiHat.swift in Sources */,
 				529AEA171DF002DA004C4425 /* AppDelegate.swift in Sources */,
 			);

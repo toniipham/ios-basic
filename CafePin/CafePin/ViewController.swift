@@ -11,9 +11,28 @@ import GoogleMobileAds
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var lblUser: UILabel!
+    
+    @IBAction func abtnLogout(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignInVC")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+    @IBAction func abtnResetPassword(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ResetPasswordVC")
+        present(vc!, animated: true, completion: nil)
+    }
+    
+    var userInfo = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let arr = userInfo.components(separatedBy: "@")
+        lblUser.text = "\(arr[0]) logged in system"
+        
         // Do any additional setup after loading the view, typically from a nib.
+        db = DBFIRApp()
         extFunc = ExtensionFunction()
         db.showBanner(vwBanner: vwAdMob,rootView: self)
         getData()
@@ -81,7 +100,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: Variables
-    var db: DBFIRApp = DBFIRApp()
+    var db: DBFIRApp! = nil
     var arrBaiHat: Array<BaiHat> = []
     var extFunc: ExtensionFunction! = nil
     var nodeBaiHat: String = ""
@@ -131,9 +150,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            arrBaiHat.remove(at: indexPath.row)
+            
             if let node = arrBaiHat[indexPath.row].nodeBH{
-                print(node)
+                //print(node)
+                arrBaiHat.remove(at: indexPath.row)
                 deleteBaiHat(node: node)
             }
         }
