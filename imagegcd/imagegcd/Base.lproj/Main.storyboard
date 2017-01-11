@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imagegcd" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-7B-uYW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="335.5"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBb-6H-IhF">
+                                <rect key="frame" x="18" y="435.5" width="339" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1C-mq-AaA">
+                                <rect key="frame" x="20" y="380.5" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.2392156869" green="0.67450982329999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next Cute Girl">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="abtnNextGirl:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hh-9C-3Lz"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KNm-QP-lwp">
+                                <rect key="frame" x="169" y="149" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KNm-QP-lwp" firstAttribute="centerX" secondItem="i9K-7B-uYW" secondAttribute="centerX" id="3Gk-eA-aqi"/>
+                            <constraint firstItem="a1C-mq-AaA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="DIp-aj-XOr"/>
+                            <constraint firstItem="cBb-6H-IhF" firstAttribute="trailing" secondItem="a1C-mq-AaA" secondAttribute="trailing" id="HLc-f8-8Tl"/>
+                            <constraint firstItem="i9K-7B-uYW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="J0z-Ch-qQS"/>
+                            <constraint firstItem="cBb-6H-IhF" firstAttribute="top" secondItem="a1C-mq-AaA" secondAttribute="bottom" constant="25" id="Nxj-4l-8ZZ"/>
+                            <constraint firstItem="KNm-QP-lwp" firstAttribute="centerY" secondItem="i9K-7B-uYW" secondAttribute="centerY" id="awk-0Y-5bX"/>
+                            <constraint firstAttribute="trailing" secondItem="a1C-mq-AaA" secondAttribute="trailing" constant="20" id="fXO-Kj-7OH"/>
+                            <constraint firstItem="cBb-6H-IhF" firstAttribute="leading" secondItem="a1C-mq-AaA" secondAttribute="leading" id="fxW-6Y-Dv7"/>
+                            <constraint firstItem="a1C-mq-AaA" firstAttribute="top" secondItem="i9K-7B-uYW" secondAttribute="bottom" constant="45" id="gKg-KP-S58"/>
+                            <constraint firstItem="i9K-7B-uYW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n0m-D1-n75"/>
+                            <constraint firstAttribute="trailing" secondItem="i9K-7B-uYW" secondAttribute="trailing" id="v4h-hy-Gqt"/>
+                            <constraint firstItem="i9K-7B-uYW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/2" constant="1" id="zhb-0n-jEm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgGirls" destination="i9K-7B-uYW" id="28A-jB-f7t"/>
+                        <outlet property="indWaiting" destination="KNm-QP-lwp" id="iXH-xa-yn9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
