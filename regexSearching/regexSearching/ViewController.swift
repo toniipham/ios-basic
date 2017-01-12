@@ -31,11 +31,14 @@ class ViewController: UIViewController {
     @IBAction func abtnSearch(_ sender: Any) {
         let pattern = txtPattern.text
         let strTest = txtTestView.text
+        highlightText(searchingText: pattern!, textView: txtTestView)
+        
         let match = matches(for: pattern!, in: strTest!) // check unwrap optional
         let alert = UIAlertController(title: "Information", message: "Matches Found\r\n\(match)", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
+        
     }
 
     func matches(for regex: String, in text: String) -> [String] {
@@ -48,6 +51,7 @@ class ViewController: UIViewController {
                 for n in 0..<match.numberOfRanges-1{
                     let rangeX = match.rangeAt(n)
                     let m = nsString.substring(with: rangeX)
+                    
                     res.append(m)
                 }
             }
@@ -58,7 +62,30 @@ class ViewController: UIViewController {
             return []
         }
     }
-
+    func highlightText(searchingText: String, textView: UITextView){
+        let searchString = searchingText
+        let baseString = textView.text
+        
+        let attributed = NSMutableAttributedString(string: baseString!)
+        do
+        {
+            let regex = try! NSRegularExpression(pattern: searchString,options: .allowCommentsAndWhitespace)
+            for match in regex.matches(in: baseString!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (baseString?.characters.count)!)) as [NSTextCheckingResult] {
+                attributed.addAttribute(NSForegroundColorAttributeName, value: UIColor.brown, range: match.range)
+                attributed.addAttribute(NSBackgroundColorAttributeName, value: UIColor.yellow, range: match.range)
+                attributed.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleDouble.rawValue, range: match.range)
+                attributed.addAttribute(NSFontAttributeName, value: UIFont(name: "Chalkduster", size: 18.0)!, range: match.range)
+                let myShadow = NSShadow()
+                myShadow.shadowBlurRadius = 3
+                myShadow.shadowOffset = CGSize(width: 3, height: 3)
+                myShadow.shadowColor = UIColor.gray
+                attributed.addAttribute(NSShadowAttributeName, value: myShadow, range: match.range)
+                
+            }
+            textView.attributedText = attributed
+        }
+        
+    }
     
 }
 
